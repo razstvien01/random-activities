@@ -16,6 +16,19 @@ Enter Credit Units: 300
 Enter GWA: 99
 */
 
+/*
+FILES:
+ - main.cpp
+ - file_functions.h - use to read and write student_data.txt
+ - student.h
+ - menu.h
+ - addnew.h
+ - modify.h
+ - report.h
+ - output.h - for output purposes
+ - student_data.txt - use as a database in order to retrieve and save the data
+*/
+
 int main(int argc, char** argv) {
     mine student[30];
 

@@ -14,3 +14,4 @@ SN             Name                Program    Credit Units   Status       GWA   
 2023-01-100    Nicolen_Aricayos    BSCPE      350            Senior       98                  First_Honor    
 2023-04-201    Kimo_Kimo           BSCS       400            Summa_Cum_Laude99                  Graduates      
 2023-06-292    Arthur_Leywin       BSIT       400            Graduates    99                  Summa_Cum_Laude
+2023-05-123    Cid                 BSIT       300            Junior       90                  Third_Honor    

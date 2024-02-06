@@ -12,3 +12,4 @@
 2023-01-100 Nicolen_Aricayos BSCPE 98 First_Honor Senior 350
 2023-04-201 Kimo_Kimo BSCS 99 Graduates Summa_Cum_Laude 400
 2023-06-292 Arthur_Leywin BSIT 99 Summa_Cum_Laude Graduates 400
+2023-05-123 Cid BSIT 90 Junior Third_Honor 300
