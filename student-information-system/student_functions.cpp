@@ -12,6 +12,28 @@ int ctr = 0;
 
 mine deleted_student[30];
 
+// Function to write student data to output.txt
+void writeToOutputFile(mine student[], int num) {
+    // Open the file in write mode and write all student information to output.txt
+    ofstream outputOutputFile("output.txt");
+    if (outputOutputFile.is_open()) {
+        outputOutputFile << left << setw(15) << "SN" << setw(20) << "Name"
+                 	     << setw(11) << "Program" << setw(15) << "Credit Units"
+                         << setw(13) << "Status" << setw(20) << "GWA" << setw(15) << "Honors" << "\n";
+        outputOutputFile << "=====================================================================================================" << "\n";
+        for (int i = 1; i <= num; ++i) {
+            outputOutputFile << left << setw(15) << student[i].SN << setw(20) << student[i].name
+                             << setw(11) << student[i].program << setw(15) << student[i].credit
+                             << setw(13) << student[i].status << setw(20) << student[i].gwa
+                             << setw(15) << student[i].honors << "\n";
+        }
+        outputOutputFile.close();
+    } else {
+        cerr << "Error opening file output.txt for writing!" << endl;
+    }
+}
+
+
 void menu(mine student[])
 {
 	system("cls");
@@ -50,7 +72,7 @@ void menu(mine student[])
 			break;	}
 		
 		case 'B':{
-			
+			modify(student, num);
 //      	deletes(deleted_student, student, num, ctr);
 			break;
 		}
@@ -66,7 +88,6 @@ void menu(mine student[])
 		}
     }
 }
-
 // Function to add new students and save to file
 void addnew(mine student[], int &num) {
     char choice = 'a';
@@ -86,7 +107,6 @@ void addnew(mine student[], int &num) {
         do {
             cout << "Enter Credit Units: ";
             cin >> student[num].credit;
-
         } while (student[num].credit > 400 || student[num].credit < 0);
 
         // Calculate status
@@ -110,36 +130,45 @@ void addnew(mine student[], int &num) {
         // Calculate honors
         if ((student[num].status == "Graduates" || student[num].status == "Graduating") &&
             student[num].gwa >= 96 && student[num].gwa <= 100) {
-            student[num].honors = "Summa Cum Laude";
+            student[num].honors = "Summa_Cum_Laude";
         } else if ((student[num].status == "Graduates" || student[num].status == "Graduating") &&
                    student[num].gwa >= 93 && student[num].gwa <= 95) {
-            student[num].honors = "Magna Cum Laude";
+            student[num].honors = "Magna_Cum_Laude";
         } else if ((student[num].status == "Graduates" || student[num].status == "Graduating") &&
                    student[num].gwa >= 90 && student[num].gwa <= 92) {
-            student[num].honors = "Cum Laude";
+            student[num].honors = "Cum_Laude";
         } else if (student[num].gwa >= 96 && student[num].gwa <= 100) {
-            student[num].honors = "First Honor";
+            student[num].honors = "First_Honor";
         } else if (student[num].gwa >= 93 && student[num].gwa <= 95) {
-            student[num].honors = "Second Honor";
+            student[num].honors = "Second_Honor";
         } else if (student[num].gwa >= 90 && student[num].gwa <= 92) {
-            student[num].honors = "Third Honor";
+            student[num].honors = "Third_Honor";
         } else {
-            student[num].honors = " ";
+            student[num].honors = "No_Honor";
         }
 
         // Open the file in append mode and write the new student information
         ofstream outputFile("student_data.txt", ios::app);
         if (outputFile.is_open()) {
+            // Adjust the spacing for each field
             outputFile << student[num].SN << " " << student[num].name << " " << student[num].program << " "
-                       << student[num].gwa << " " << student[num].honors << " " << student[num].status << " "
-                       << student[num].credit << "\n";
+                       << student[num].gwa << " " << student[num].status << " " << student[num].honors
+                       << " " << student[num].credit << "\n";
             outputFile.close();
         } else {
             cerr << "Error opening file for writing!" << endl;
         }
+        
+        // Write to output.txt
+        writeToOutputFile(student, num);
 
-        cout << "Again?[A]";
+        cout << "[A] Again?";
         cin >> choice;
+
+        // Print a newline for the next data entry
+        if (choice == 'a' || choice == 'A') {
+            cout << endl;
+        }
     }
 
     char back;
@@ -156,9 +185,16 @@ void addnew(mine student[], int &num) {
 void modify(mine student[], int &num) {
     // Display all students
     cout << "List of Students:" << endl;
+    cout << left << setw(15) << "SN" << setw(20) << "Name" << setw(11) << "Program"
+         << setw(15) << "Credit Units" << setw(13) << "Status" << setw(20) << "GWA"
+         << setw(15) << "Honors" << endl;
+    cout << "=====================================================================================================" << endl;
+
     for (int k = 1; k <= num; ++k) {
-        cout << "Student " << k << ": " << student[k].name << ", Program: " << student[k].program
-             << ", GWA: " << student[k].gwa << ", Status: " << student[k].status << endl;
+        cout << left << setw(15) << student[k].SN << setw(20) << student[k].name
+             << setw(11) << student[k].program << setw(15) << student[k].credit
+             << setw(13) << student[k].status << setw(20) << student[k].gwa
+             << setw(15) << student[k].honors << endl;
     }
 
     cout << "Enter the Student Number (SN) of the student you want to modify: ";
@@ -206,21 +242,21 @@ void modify(mine student[], int &num) {
             // (Assuming the honors should be recalculated based on the new GWA and status)
             if ((student[i].status == "Graduates" || student[i].status == "Graduating") &&
                 student[i].gwa >= 96 && student[i].gwa <= 100) {
-                student[i].honors = "Summa Cum Laude";
+                student[i].honors = "Summa_Cum_Laude";
             } else if ((student[i].status == "Graduates" || student[i].status == "Graduating") &&
                        student[i].gwa >= 93 && student[i].gwa <= 95) {
-                student[i].honors = "Magna Cum Laude";
+                student[i].honors = "Magna_Cum_Laude";
             } else if ((student[i].status == "Graduates" || student[i].status == "Graduating") &&
                        student[i].gwa >= 90 && student[i].gwa <= 92) {
-                student[i].honors = "Cum Laude";
+                student[i].honors = "Cum_Laude";
             } else if (student[i].gwa >= 96 && student[i].gwa <= 100) {
-                student[i].honors = "First Honor";
+                student[i].honors = "First_Honor";
             } else if (student[i].gwa >= 93 && student[i].gwa <= 95) {
-                student[i].honors = "Second Honor";
+                student[i].honors = "Second_Honor";
             } else if (student[i].gwa >= 90 && student[i].gwa <= 92) {
-                student[i].honors = "Third Honor";
+                student[i].honors = "Third_Honor";
             } else {
-                student[i].honors = " ";
+                student[i].honors = "No_Honor";
             }
 
             // Update the modified student information in the file
@@ -235,6 +271,9 @@ void modify(mine student[], int &num) {
             } else {
                 cerr << "Error opening file for writing!" << endl;
             }
+            
+            // Write to output.txt
+        	writeToOutputFile(student, num);
 
             cout << "Student with SN " << targetSN << " has been modified." << endl;
             break;
@@ -251,61 +290,6 @@ void modify(mine student[], int &num) {
     if (back == 'y' || back == 'Y') {
         menu(student);
     } else {
-        exit(0);
-    }
-}
-
-void deletes(mine deleted_student[], mine student[], int &num, int &dels) {
-    int del;
-
-    cout << "List of Students:" << endl;
-    for (int i = 0; i <= num; i++) 
-	{
-        cout << i << ". " << student[i].name << endl;
-    }
-
-    cout << "Delete student. Choose a number: ";
-    cin >> del;
-
-    if (del >= 0 && del <= num) {
-        deleted_student[dels] = student[del];
-
-        for (int i = del; i < num; i++) 
-		{
-            student[i] = student[i + 1];
-        }
-
-        dels++;
-        num--;
-
-        cout << "Student deleted successfully." << endl;
-    } else 
-    
-	{
-        cout << "INVALID NUMBER." << endl;
-    }
-
-    // Display deleted student/s
-    cout << fixed << setprecision(1);
-    cout << left;
-    cout << setw(15) << "SN" << setw(20) << "Name" << setw(11) << "Program" << setw(15) << "Credit Units" << setw(13) << "Status" << setw(20) << "GWA" <<setw(15)<< "Honors" << endl;
-    cout << "=====================================================================================================" << endl;
-
-    for (int i = 0; i < dels; i++) 
-	{
-        cout << left;
-        cout << setw(15) << deleted_student[i].SN << setw(20) << deleted_student[i].name << setw(11) << deleted_student[i].program << setw(15) << deleted_student[i].credit << setw(13) << deleted_student[i].status << setw(20) << deleted_student[i].gwa <<setw(15)<<deleted_student[i].honors << endl;
-    }
-
-    char back;
-    cout << "Back? [Y]: ";
-    cin >> back;
-    if (back == 'y' || back == 'Y') 
-	{
-        menu(student);
-    } else 
-    
-	{
         exit(0);
     }
 }

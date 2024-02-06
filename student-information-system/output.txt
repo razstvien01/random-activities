@@ -1,0 +1,16 @@
+SN             Name                Program    Credit Units   Status       GWA                 Honors         
+=====================================================================================================
+2023-01-001    Pedro_Penduko       BSIT       350            Graduating   99                  First_Honor    
+2023-01-002    Juan_Luna           BSIT       400            Graduates    90                  Third_Honor    
+2023-01-003    Jose_Mattew         BSIT       150            Sophomore    93                  Second_Honor   
+2023-01-004    Andres_Bonifacio    BSIT       69             Freshmen     96                  First_Honor    
+2023-01-005    Emilio_Aguinaldo    BSIT       99             Freshmen     95                  Second_Honor   
+2023-01-006    Luna_Atonio         BSIT       323            Senior       94                  Second_Honor   
+2023-01-007    Evelyn_Figuracion   BSIT       300            Senior       93                  Third_Honor    
+2023-01-008    Michael_Vocal       BSIT       250            Junior       99                  First_Honor    
+2023-01-009    Imelda_Espiritu     BSIT       123            Sophomore    92                  Third_Honor    
+2023-01-010    Mike_Vocal          BSIT       234            Junior       91                  Third_Honor    
+2023-01-111    Johhn_Doe           BSCS       240            Junior       99                  First_Honor    
+2023-01-100    Nicolen_Aricayos    BSCPE      350            Senior       98                  First_Honor    
+2023-04-201    Kimo_Kimo           BSCS       400            Summa_Cum_Laude99                  Graduates      
+2023-06-292    Arthur_Leywin       BSIT       400            Graduates    99                  Summa_Cum_Laude

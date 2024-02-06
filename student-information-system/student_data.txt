@@ -1,14 +1,14 @@
-2023-1-001 Pedro_Penduko BSIT 99 First_Honor Graduating 350
-2023-1-002 Juan_Luna BSIT 90 Third_Honor Graduates 400
-2023-1-003 Jose_Mattew BSIT 93 Second_Honor Sophomore 150
-2023-1-004 Andres_Bonifacio BSIT 96 First_Honor Freshmen 69
-2023-1-005 Emilio_Aguinaldo BSIT 95 Second_Honor Freshmen 99
-2023-1-006 Luna_Atonio BSIT 94 Second_Honor Senior 323
-2023-1-007 Evelyn_Figuracion BSIT 93 Third_Honor Senior 300
-2023-1-008 Michael_Vocal BSIT 99 First_Honor Junior 250
-2023-1-009 Imelda_Espiritu BSIT 92 Third_Honor Sophomore 123
-2023-1-010 Mike_Vocal BSIT 91 Third_Honor Junior 234
-2022-1-011 Maria_Santos BSCS 88 Second_Honor Graduating 280
-2021-1-012 Carlos_Rodriguez BSCS 94 First_Honor Graduating 300
-2023-5-109 Nicolen Evanz Aricayos BSCPE 400   Freshmen 99
-2023-3-201 Kimo BSCE 200   Sophomore 200
+2023-01-001 Pedro_Penduko BSIT 99 First_Honor Graduating 350
+2023-01-002 Juan_Luna BSIT 90 Third_Honor Graduates 400
+2023-01-003 Jose_Mattew BSIT 93 Second_Honor Sophomore 150
+2023-01-004 Andres_Bonifacio BSIT 96 First_Honor Freshmen 69
+2023-01-005 Emilio_Aguinaldo BSIT 95 Second_Honor Freshmen 99
+2023-01-006 Luna_Atonio BSIT 94 Second_Honor Senior 323
+2023-01-007 Evelyn_Figuracion BSIT 93 Third_Honor Senior 300
+2023-01-008 Michael_Vocal BSIT 99 First_Honor Junior 250
+2023-01-009 Imelda_Espiritu BSIT 92 Third_Honor Sophomore 123
+2023-01-010 Mike_Vocal BSIT 91 Third_Honor Junior 234
+2023-01-111 Johhn_Doe BSCS 99 First_Honor Junior 240
+2023-01-100 Nicolen_Aricayos BSCPE 98 First_Honor Senior 350
+2023-04-201 Kimo_Kimo BSCS 99 Graduates Summa_Cum_Laude 400
+2023-06-292 Arthur_Leywin BSIT 99 Summa_Cum_Laude Graduates 400
