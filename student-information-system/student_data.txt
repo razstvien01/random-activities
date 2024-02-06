@@ -8,5 +8,7 @@
 2023-1-008 Michael_Vocal BSIT 99 First_Honor Junior 250
 2023-1-009 Imelda_Espiritu BSIT 92 Third_Honor Sophomore 123
 2023-1-010 Mike_Vocal BSIT 91 Third_Honor Junior 234
-
-
+2022-1-011 Maria_Santos BSCS 88 Second_Honor Graduating 280
+2021-1-012 Carlos_Rodriguez BSCS 94 First_Honor Graduating 300
+2023-5-109 Nicolen Evanz Aricayos BSCPE 400   Freshmen 99
+2023-3-201 Kimo BSCE 200   Sophomore 200

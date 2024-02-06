@@ -36,7 +36,7 @@ void loadFromFile(mine student[]) {
         return;
     }
 
-    int i = 0; // Start index for array
+    int i = 1; // Start index for array
     while (inputFile >> student[i].SN >> student[i].name >> student[i].program
                     >> student[i].gwa >> student[i].honors >> student[i].status
                     >> student[i].credit) {
