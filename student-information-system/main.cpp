@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "file_functions.h"
-#include "student.h"
+//#include "student.h"
 
 using namespace std;
 
@@ -25,7 +25,7 @@ FILES:
  - addnew.h
  - modify.h
  - report.h
- - output.h - for output purposes
+ - output.h - for output purposes (output.txt)
  - student_data.txt - use as a database in order to retrieve and save the data
 */
 

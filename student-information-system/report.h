@@ -1,6 +1,5 @@
 // report.h
-#pragma once
-#include "student.h"
+//#include "student.h"
 
 void report(mine student[], int &num) {
     char choice;

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "student.h"
+//#include "student.h"
 #include "addnew.h"
 #include "modify.h"
 #include "report.h"

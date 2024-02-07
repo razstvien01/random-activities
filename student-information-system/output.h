@@ -1,9 +1,8 @@
 // menu.h
-#pragma once
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "student.h"
+//#include "student.h"
 
 using namespace std;
 

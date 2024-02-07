@@ -1,5 +1,4 @@
-#pragma once
-#include "student.h"
+//#include "student.h"
 
 
 // Function to display and modify existing students

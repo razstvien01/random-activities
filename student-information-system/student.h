@@ -1,5 +1,3 @@
-#pragma once
-
 #include <string>
 
 struct mine {
@@ -14,3 +12,5 @@ struct mine {
 
 extern int num;
 extern int ctr;
+
+void menu(mine student[]);

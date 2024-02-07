@@ -1,10 +1,8 @@
 // addnew.h
-#pragma once
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "student.h"
-//#include "menu.h"
+//#include "student.h"
 #include "output.h"
 
 using namespace std;
